@@ -18,22 +18,20 @@
  ```
 
 
-# my_todolist(Vue版)
 
-## Project setup
+## 项目插件安装
 ```
-pnpm install
-```
-
-### Compiles and hot-reloads for development
-```
-pnpm run serve
+pnpm install  或 npm i
 ```
 
-### Compiles and minifies for production
+###  项目启动
 ```
-pnpm run build
+pnpm run serve 或 npm run serve
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+###  项目打包
+```
+pnpm run build 或 npm run build
+```
+
+ 
