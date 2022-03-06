@@ -1,32 +1,27 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <TodoList/>
     <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import Vue from 'vue'
+export default {
+  name:'App',
+  components:{
+    TodoList:()=>import('./views/TodoList.vue')
+  },
+  beforeCreate(){
+    Vue.prototype.$bus = this
   }
 }
+</script>
+
+<style lang="scss">
+ @import url('//at.alicdn.com/t/font_2851497_pl3kf6ogwc8.css');
+ *{
+   font-family:Courier ;
+   
+ }
 </style>
