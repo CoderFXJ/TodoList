@@ -4,9 +4,11 @@ import router from './router'
 import store from './store'
 
 Vue.config.productionTip = false
+import VueParticles from 'vue-particles'
+Vue.use(VueParticles)
 
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+    router,
+    store,
+    render: h => h(App)
 }).$mount('#app')

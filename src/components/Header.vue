@@ -2,7 +2,8 @@
   <div id='Header'  class='Header'>
     <h1>TodoList</h1>
    <div class="input-box">
-      <input type="text" class="todo-input" v-model.trim="inputValue" @keyup.enter="inputHandler" ref="inputRef">
+      <input type="text" class="todo-input" placeholder="请输入事项，按回车添加"
+      v-model.trim="inputValue" @keyup.enter="inputHandler" ref="inputRef">
       <i class="iconfont icon-icon_nav_clost_line" @click="clearHandler"></i>
    </div>
   </div>
@@ -82,6 +83,7 @@ export default {
      border:none;
      outline: none;
      height:40px;
+     line-height: 40px;
      padding:0 20px;
      flex:1;
      box-sizing: border-box;
@@ -98,6 +100,9 @@ export default {
         text-align: center;
         cursor: pointer;
    }
+   ::placeholder {
+      color: #ddd;
+    }
  
  }
 </style>
